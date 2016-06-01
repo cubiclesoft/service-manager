@@ -13,8 +13,18 @@ Features
 * Statically compiled targets for Windows, Mac, and Linux (32-bit and 64-bit).
 * Natively supports these common service commands across all platforms:  install, uninstall, start, stop, restart, reload, status, waitfor, configfile, run, and custom actions.
 * Also has a few per-platform options (e.g. win_priority, nix_user, nix_group).
+* Nifty stuff:  Automatic restart if the service dies, handling system signals on appropriate platforms, etc.
 * Has a liberal open source license.  MIT or LGPL, your choice.
 * Sits on GitHub for all of that pull request and issue tracker goodness to easily submit changes and ideas respectively.
+
+Intro Video
+-----------
+
+Watch the YouTube intro video:
+
+[![Click to watch:  Introduction to Service Manager](https://img.youtube.com/vi/HobVSLiTDEI/0.jpg)](https://www.youtube.com/watch?v=HobVSLiTDEI "Click to watch:  Introduction to Service Manager")
+
+It's got music and a pretty solid Aussie accent.  It is also only 5 minutes long.
 
 How To Use Service Manager
 --------------------------
