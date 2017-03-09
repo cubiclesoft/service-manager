@@ -140,9 +140,14 @@
 			$os = php_uname("s");
 
 			if (strtoupper(substr($os, 0, 3)) == "WIN")  $result = $this->rootpath . "\\servicemanager.exe";
-			else if (strtoupper(substr($os, 0, 6)) == "DARWIN")  $result = $this->rootpath . "/servicemanager_mac";
-			else if (PHP_INT_SIZE >= 8)  $result = $this->rootpath . "/servicemanager_nix_64";
-			else  $result = $this->rootpath . "/servicemanager_nix_32";
+			else
+			{
+				if (strtoupper(substr($os, 0, 6)) == "DARWIN")  $result = $this->rootpath . "/servicemanager_mac";
+				else if (PHP_INT_SIZE >= 8)  $result = $this->rootpath . "/servicemanager_nix_64";
+				else  $result = $this->rootpath . "/servicemanager_nix_32";
+
+				@chmod($result, 0755);
+			}
 
 			return $result;
 		}
