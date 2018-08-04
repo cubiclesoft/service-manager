@@ -141,3 +141,16 @@ How To Debug A Service
 One of the really nice features of Service Manager is that you don't need it to debug your service.  Just run your app normally from a command-line and use Ctrl+C to terminate it.
 
 That said, sometimes things can work fine from a command-line but not so fine as a system service.  The Service Manager '-debug' 'run' action takes most of the same options as the 'install' action and then replicates some of the service environment without detaching from the terminal/shell/command prompt.  Doing this allows you to see debug output as it happens to figure out what is wrong.
+
+Precompiled Binaries
+--------------------
+
+Precompiled binaries save the compilation step for select, popular architectures.  Currently, there are binaries for:
+
+* Windows - Anything current, x86/x64 (i.e. 32-bit and 64-bit).
+* Mac - x64 only (i.e. 64-bit Intel).
+* Linux - x86/x64.
+
+The binaries included in this repo are just meant to make most deployments easier since they aren't particularly big (~130KB each).
+
+For other architectures (e.g. Linux on ARM), [building and installing from the source code](https://github.com/cubiclesoft/service-manager-src#building-and-installing-locally) is a good option.
